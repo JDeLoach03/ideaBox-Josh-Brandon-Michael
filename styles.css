@@ -1,3 +1,16 @@
+html, body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+
 .left-column-whole {
     display: flex;
     flex-direction: column;
@@ -10,6 +23,15 @@
     display: flex;
     height: 10vh;
     /* border: 1px solid rgb(11, 244, 88); */
+}
+
+.form-section {
+  background-color: #A9AAD2;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
 }
 
 
@@ -53,4 +75,14 @@
     width: 99%;
     border: 1px solid #353567;
     margin-top: 18px;
+}
+
+.ideabox-literally {
+  background-color: #EAEAF4;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  /* border: 2px solid red; */
 }
