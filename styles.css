@@ -12,6 +12,7 @@ html, body {
 
 
 .left-column-whole {
+    font-family: "Open Sans, Light";
     display: flex;
     flex-direction: column;
     background-color: #1F1F3D;
@@ -85,4 +86,47 @@ html, body {
   justify-content: space-between;
   padding: 3px;
   /* border: 2px solid red; */
+}
+
+.idea-cards {
+    display: flex;
+    flex-direction: column;
+    width: 14vw;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 2px solid #353567;
+}
+
+.idea-card-head {
+    display: flex;
+    background-color: #1F1F3D;
+    height: 3vh;
+}
+
+.idea-card-body {
+    background-color: #FFFFFF;
+}
+
+.idea-title {
+    font-family: 'Open Sans, Bold';
+    color: #1F1F3D;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 4px;
+}
+
+.idea-text {
+    font-family: 'Open Sans, Light';
+    color: #1F1F3D;
+    height: 15vh;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 4px;
+}
+
+.idea-card-foot {
+    background-color: #5356A4;
+    color: #E9E9F3;
+    height: 3vh;
 }
