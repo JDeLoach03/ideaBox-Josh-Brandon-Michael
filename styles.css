@@ -17,12 +17,13 @@ html, body {
     flex-direction: column;
     background-color: #1F1F3D;
     height: 100vh;
-    width: 20vw;
+    width: 40vw;
 }
 
 .left-column1 {
     display: flex;
     height: 10vh;
+    width: 275px;
     /* border: 1px solid rgb(11, 244, 88); */
 }
 
@@ -116,19 +117,6 @@ html, body {
 .body{
 margin-top: 25px;
 }
-input[type="search"] {
-  border: none;
-  background: transparent;
-  margin: 0;
-  /* padding: 7px 8px; */
-  font-size: 14px;
-  color: inherit;
-  /* border: 1px solid transparent;
-  border-radius: inherit; */
-}
-input[type="search"]::placeholder {
-  color: #bbb;
-}
 button[type="submit"] {
   text-indent: -999px;
   overflow: hidden;
@@ -137,7 +125,7 @@ button[type="submit"] {
   padding: 0;
   margin-left:30%;
    border: 1px solid transparent;
-  /border-radius: inherit;
+   border-radius: inherit;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -2 22.45 19.55'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23e9e9f3;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eideabox-2019Artboard 39%3C/title%3E%3Cg id='text_and_icons' data-name='text and icons'%3E%3Cpath class='cls-1' d='M11.77,14.31a1.32,1.32,0,0,1-1-.4L8.2,11.31a5.79,5.79,0,1,1,1.86-9.43h0A5.79,5.79,0,0,1,11.31,8.2l2.6,2.61a1.35,1.35,0,0,1,0,1.93l-1.17,1.17A1.36,1.36,0,0,1,11.77,14.31ZM8.56,8.83l3.21,3.22.28-.28L8.84,8.56l.39-.67A3.78,3.78,0,1,0,7.89,9.23Z'/%3E%3C/g%3E%3C/svg%3E");
   background-color: #1F1F3D;
   cursor: pointer;
@@ -154,16 +142,11 @@ input[type="search"]:focus {
   outline: none;
 }
 #search-ideas-field-id{
+  margin-top: 50px;
   width: 20.75vw;
-  height: 5vh;
-  margin-left:1px;
+  height: 5.4vh;
+  margin-left:-4px;
 }
-
-/* .title{
-  margin-top: 10%;
-  justify-content: space-between;
-} */
-
 
 .idea-cards {
     display: flex;
@@ -207,4 +190,3 @@ input[type="search"]:focus {
     color: #E9E9F3;
     height: 3vh;
 }
-
