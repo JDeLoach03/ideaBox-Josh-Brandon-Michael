@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-  <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-      <main>
-      <div class="wrapper">
-        <section class="left-column-whole">
-        <section class="left-column1">
-          <div class="idea-box-text">IdeaBox</div>
-        </section>
-        <hr class="hr-purple1">
-        <section class="left-column2">
-          <div class="filter-starred-ideas">Filter Starred Ideas</div>
-          <button class="show-starred-idea-button" type="button">Show Starred Ideas</button>
-        <hr class="hr-purple2">
-        </section>
-        </section>
-        <div class="main-content">
-        <section class="form-section">
-          <form>
-            <label class ='title' for="title">Title</label>
-            <input type="text" id="title-field-id" name="title-box">
-            <label class ='body' for="body">Body</label>
-            <input type="text" id="body-field-id" name="body-box">
-          </form>
-        <button class="save-button" type="button">Save</button>
-        <div>
-            <button class="search-button" type="submit">Search</button>
-            <label for="search-ideas"></label>
-            <input type="text" placeholder="Search ideas" id="search-ideas-field-id" name="search-ideas-box">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="wrapper">
+            <section class="left-column-whole">
+                <section class="left-column1">
+                    <div class="idea-box-text">IdeaBox</div>
+                </section>
+                <hr class="hr-purple1">
+                <section class="left-column2">
+                    <div class="filter-starred-ideas">Filter Starred Ideas</div>
+                    <button class="show-starred-idea-button" type="button">Show Starred Ideas</button>
+                    <hr class="hr-purple2">
+                </section>
+            </section>
+            <div class="main-content">
+                <section class="form-section">
+                    <form>
+                        <label class='title' for="title">Title</label>
+                        <input type="text" id="title-field-id" name="title-box">
+                        <label class='body' for="body">Body</label>
+                        <input type="text" id="body-field-id" name="body-box">
+                    </form>
+                    <button class="save-button" type="button">Save</button>
+                    <div>
+                        <button class="search-button" type="submit">Search</button>
+                        <label for="search-ideas"></label>
+                        <input type="text" placeholder="Search ideas" id="search-ideas-field-id"
+                            name="search-ideas-box">
+                    </div>
+                </section>
+                <section class="ideabox-literally">
+                    <div class="idea-section">
+                        <section class="idea-cards">
+                            <div class="button-wrapper">
+                                <div class="idea-card-head">
+                                    <div>
+                                        <button class="star-button"></button>
+                                    </div>
+                                    <div>
+                                        <button class="delete-button"> </button>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="idea-card-body">
+                                    <div class="idea-title">Idea Title</div>
+                                    <div class="idea-text">Idea Text</div>
+                                </div>
+                                <div class="idea-card-foot">
+                                    <div class="comment"><button id="comment-button"></button>Comment</div>
+                                </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
         </div>
-        </section>
-        <section class="ideabox-literally">
-            <div class="idea-section">
-                <section class="idea-cards">
-            <div class="idea-card-head"></div>
-            <div class="idea-card-body">
-                <div class="idea-title">Idea Title</div>
-                <div class="idea-text">Idea Text</div>
-            </div>
-            <div class="idea-card-foot">
-                <div class="comment">Comment</div>
-            </div>
-        </section>
-            </div>
-        </section>
-      </div>
-    </div>
-      </main>
-  </body>
+    </main>
+</body>
