@@ -18,17 +18,34 @@ createIdea();
 showIdea();
 });
 
+titleBox.addEventListener('keyup', checkInput);
+bodyBox.addEventListener('keyup', checkInput);
+
+// functions go here
 
 
-//functions go here
 function checkInput(){
   if (titleBox.value && bodyBox.value){
-    saveButton.disable = false;
-    saveButton.classList.add(".disabled-button");
+    saveButton.disabled = false;
   } else {
-    saveButton.disable = true;
+    saveButton.disabled = true;
+  }
 }
-}
+
+
+
+// saveButton.addEventListener('input', () => {
+//   if (titleBox.value.length > 0 &&
+//       bodyBox.value.length > 0) {
+//         saveButton.removeAttribute('disable');
+//       } else {
+//         saveButton.setAttribute('disable', 'disable');
+//       }
+// });
+
+
+
+
 function createIdea() {
   newIdea = new Idea(this.title, this.body)
   activeIdeas.push(newIdea)
