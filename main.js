@@ -1,5 +1,4 @@
 
-
 // variables go here
 var savedIdeas = [];
 var activeIdeas = [];
@@ -9,6 +8,7 @@ var titleBox = document.querySelector('input[name="title-box"]');
 var bodyBox = document.querySelector('input[name="body-box"]');
 var ideaSection = document.querySelector('.idea-section');
 var deleteButton = document.querySelector('.delete-button');
+var starButton = document.querySelector(".star-button");
 
 
 
@@ -25,8 +25,16 @@ titleBox.addEventListener('keyup', checkInput);
 bodyBox.addEventListener('keyup', checkInput);
 ideaSection.addEventListener('click', function(event){
   deleteIdea(event);
-
 }); 
+ideaSection.addEventListener('click', function(event){
+  saveIdea(event);
+})
+
+
+// window.addEventListener('load', (event) => {
+//   saveIdea()
+// });
+
 // functions go here
 
 
@@ -81,10 +89,17 @@ function createIdea() {
     }
   }
 
-  function deleteIdeaArray(event){
+  function deleteIdeaArray(){
     for (var i = 0; i < activeIdeas.length; i++){
       if (activeIdeas[i].id === newIdea.id) {
         activeIdeas.splice(i, 1);
       }
     }
   }
+
+  function saveIdea(event){
+    if (event.target.classList.contains("star-button")){
+      savedIdeas.unshift(newIdea)
+      updateIdea(newIdea);
+    }
+   }
