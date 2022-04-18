@@ -107,22 +107,23 @@ body {
 }
 
 .save-button:disabled, button[disabled]{
-background-color:#A9AAD2; 
+background-color:#A9AAD2;
 cursor: help;
 }
 
 
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     margin-left: 30%;
     margin-top: 0%;
     width: 25%;
 }
 
-#body-field-id {
-    margin-top: 0%;
-    height: 10vh;
+textarea{
+    height: 150px;
+    box-sizing: border-box;
+    resize: none;
 }
 
 #title-field-id {
@@ -214,7 +215,7 @@ input[type="search"]:focus {
     padding-right: 17px;
     padding-left: 10px;
     padding-bottom: 5px;
-   
+
 
 }
 
