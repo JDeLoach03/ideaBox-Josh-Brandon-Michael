@@ -17,7 +17,7 @@ saveButton.addEventListener('click', function(){
 checkInput();
 createIdea();
 showIdea();
-clearInput(); 
+clearInput();
 checkInput();
 });
 
@@ -25,18 +25,13 @@ titleBox.addEventListener('keyup', checkInput);
 bodyBox.addEventListener('keyup', checkInput);
 ideaSection.addEventListener('click', function(event){
   deleteIdea(event);
-}); 
+});
 ideaSection.addEventListener('click', function(event){
   saveIdea(event);
-})
+});
 
-
-// window.addEventListener('load', (event) => {
-//   saveIdea()
-// });
 
 // functions go here
-
 
 function checkInput(){
   if (titleBox.value && bodyBox.value){
@@ -85,21 +80,70 @@ function createIdea() {
     function deleteIdea(event){
       if (event.target.classList.contains("delete-button")){
         event.target.closest('section').remove();
-        deleteIdeaArray(event)
+        deleteIdeaArray(activeIdeas)
     }
   }
 
-  function deleteIdeaArray(){
-    for (var i = 0; i < activeIdeas.length; i++){
-      if (activeIdeas[i].id === newIdea.id) {
-        activeIdeas.splice(i, 1);
+  function deleteIdeaArray(array){
+    for (var i = 0; i < array.length; i++){
+      if (array[i].id === newIdea.id) {
+        array.splice(i, 1);
       }
     }
   }
 
+  //push new instance to new array saved if the star is clicked
+  //removing it from that array with some sort of toggle
+
   function saveIdea(event){
+    // if (savedIdeas.includes(newIdea.id)) return
     if (event.target.classList.contains("star-button")){
-      savedIdeas.unshift(newIdea)
-      updateIdea(newIdea);
+      if (savedIdeas.star === true) {
+        deleteIdeaArray(savedIdeas);
+      }
+      // if (savedIdeas.star === false) {
+        savedIdeas.unshift(newIdea);
+        newIdea.updateIdea();
+      } else {
+        // removeIdea();
+      }
     }
-   }
+
+
+
+  // function removeIdea() {
+  //    for (var i = 0; savedIdeas.length; i++) {
+  //     if (savedIdeas[i].id === savedIdeas.id) {
+  //       savedIdeas.splice(i, 1);
+  //     }
+  //    }
+  //  }
+
+
+   //
+   // function someShit() {
+   //   savedIdeas.unshift(newIdea);
+   //   newIdea.updateIdea();
+   // }
+
+
+
+  // function compareArray() {
+  //   if (activeIdeas.star) {
+  //     savedIdeas.unshift(newIdea);
+  //     newIdea.updateIdea();
+  //   }
+  //   for (var i = 0; activeIdeas.length && savedIdeas.length)
+  // }
+  //
+  //
+  //
+  // function checkStar() {
+  //   for (var i = 0; i < savedIdeas.length; i++) {
+  //     if (savedIdeas[i].star === false) {
+  //       someShit();
+  //     } else {
+  //       removeIdea();
+  //     }
+  //   }
+  // }
