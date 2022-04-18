@@ -31,13 +31,7 @@ ideaSection.addEventListener('click', function(event){
 })
 
 
-// window.addEventListener('load', (event) => {
-//   saveIdea()
-// });
-
 // functions go here
-
-
 function checkInput(){
   if (titleBox.value && bodyBox.value){
     saveButton.disabled = false;
@@ -56,9 +50,9 @@ function createIdea(){
   activeIdeas.push(newIdea)
 }
 
-    function showIdea(){
-      var makeIdea = `
-  <div class="idea-section">
+function showIdea(){
+  var makeIdea = `
+    <div class="idea-section">
         <section class="idea-cards" id="${newIdea.id}">
             <div class="button-wrapper">
                 <div class="idea-card-head">
@@ -82,7 +76,7 @@ function createIdea(){
       ideaSection.innerHTML += makeIdea;
     }
 
-    function deleteIdea(event){
+  function deleteIdea(event){
       if (event.target.classList.contains("delete-button")){
         event.target.closest('section').remove();
         deleteIdeaArray(event)
@@ -98,9 +92,9 @@ function createIdea(){
   }
 
 
-  function deleteIdeaArray2(){
+  function deleteIdeaArray2(id){
     for (var i = 0; i < savedIdeas.length; i++){
-      if (savedIdeas[i].id === newIdea.id) {
+      if (savedIdeas[i].id === id) {
         savedIdeas.splice(i, 1);
       }
     }
@@ -109,10 +103,24 @@ function createIdea(){
   function saveIdea(event){
     if (event.target.classList.contains("star-button")){
     if (savedIdeas.includes(newIdea)) {
-      deleteIdeaArray2();
+      deleteIdeaArray2(event.path[4].id);
     } else {
-      savedIdeas.push(newIdea)
+      for (var i = 0; i < activeIdeas.length; i++) {
+        if (event.path[4].id === activeIdeas[i].id) {
+          savedIdeas.push(activeIdeas[i])
+        }
+      }
       newIdea.updateIdea()
+      changeStar(event)
     }
    }
+  }
+
+
+  function changeStar(event){
+    var id = event.path[4].id;
+      for(var i = 0; i < activeIdeas.length; i++){
+        if (activeIdeas[i].id === id) {
+      }
+    }
   }
