@@ -34,7 +34,7 @@
 
 ## Deployed Page
 
-Visit our published Hang In There Site! [here](https://jdeloach03.github.io/ideaBox-Josh-Brandon-Michael/)
+Visit our published IdeaBox site [here!](https://jdeloach03.github.io/ideaBox-Josh-Brandon-Michael/)
 
 ## Possible Future Extensions
   - In the future we would have enjoyed a filter so we can toggle to and from the cards we liked.
