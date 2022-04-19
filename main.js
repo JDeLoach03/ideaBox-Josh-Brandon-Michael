@@ -28,8 +28,7 @@ ideaSection.addEventListener('click', function(event){
 });
 ideaSection.addEventListener('click', function(event){
   saveIdea(event);
-})
-
+});
 
 // functions go here
 function checkInput(){
@@ -51,13 +50,14 @@ function createIdea(){
 }
 
 function showIdea(){
+  var starButtonId = `star-button-${newIdea.id}`
   var makeIdea = `
     <div class="idea-section">
         <section class="idea-cards" id="${newIdea.id}">
             <div class="button-wrapper">
                 <div class="idea-card-head">
                     <div>
-                        <button class="star-button"></button>
+                        <button class="star-button" id="${starButtonId}"></button>
                     </div>
                     <div>
                         <button class="delete-button"></button>
@@ -74,6 +74,8 @@ function showIdea(){
         </section>
     </div>`
       ideaSection.innerHTML += makeIdea;
+      var newStarButton = document.querySelector(`#${starButtonId}`);
+      newStarButton.addEventListener('click', fillStar);
     }
 
   function deleteIdea(event){
@@ -123,4 +125,11 @@ function showIdea(){
         if (activeIdeas[i].id === id) {
       }
     }
+  }
+  function fillStar() {
+    if (event.target.classList.contains('filled')){
+      event.target.classList.remove('filled')
+    } else {
+    event.target.classList.add('filled');
+  }
   }
